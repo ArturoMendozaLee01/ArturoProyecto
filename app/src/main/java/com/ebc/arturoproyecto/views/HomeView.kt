@@ -118,7 +118,7 @@ fun ContentHomeView(paddingValues: PaddingValues, viewModel: CalculadoraViewMode
 
         if(state.mostrarAlerta){
             AlertDialog(
-                onDismissRequest = { /*TODO*/ },
+                onDismissRequest = {  },
                 confirmButton = {
                     Button(onClick = {viewModel.cancelarAlerta()}) {
                         Text(text="Aceptar")
