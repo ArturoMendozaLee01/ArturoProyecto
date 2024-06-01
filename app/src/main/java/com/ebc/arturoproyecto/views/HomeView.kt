@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.ebc.arturoproyecto.R
@@ -77,7 +78,8 @@ fun ContentHomeView(paddingValues: PaddingValues, viewModel: CalculadoraViewMode
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 20.dp)
+                .padding(horizontal = 20.dp),
+
         )
 
         Spacer(modifier = Modifier.height(10.dp)) // Espacio horizontal
@@ -101,7 +103,7 @@ fun ContentHomeView(paddingValues: PaddingValues, viewModel: CalculadoraViewMode
                 .fillMaxWidth()
                 .padding(horizontal = 30.dp)
         ) {
-            Text(text = "Calcular")
+            Text(text = "Calcular", fontWeight = FontWeight.Bold)
         }
 
         Spacer(modifier = Modifier.height(10.dp))
@@ -113,7 +115,7 @@ fun ContentHomeView(paddingValues: PaddingValues, viewModel: CalculadoraViewMode
                 .fillMaxWidth()
                 .padding(horizontal = 30.dp)
         ) {
-            Text(text = "Limpiar")
+            Text(text = "Limpiar", fontWeight = FontWeight.Bold)
         }
 
         if(state.mostrarAlerta){
