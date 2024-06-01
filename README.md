@@ -15,15 +15,14 @@ de propina deseado y obtener el monto de la propina y el total con propina de ma
 
 * **Lenguaje de programación:** Kotlin
 * **Entorno de desarrollo:** Android Studio
-* **Librerías:** Android SDK, AppCompat library, Material Design library
 
 **Cómo usar la aplicación:**
 
 1. Descargue e instale la aplicación Mr. Tips desde Google Play Store.
 2. Abra la aplicación y ingrese el total de la cuenta en el campo correspondiente.
-3. Seleccione el porcentaje de propina deseado de la lista desplegable o ingrese su propio porcentaje personalizado.
+3. Ingrese su propio porcentaje personalizado.
 4. La aplicación calculará automáticamente el monto de la propina y el total con propina y los mostrará en los campos correspondientes.
-5. Puede usar los botones "Compartir" para compartir la información de la propina con amigos o familiares.
+
 
 
 
