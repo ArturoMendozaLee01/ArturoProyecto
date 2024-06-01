@@ -24,16 +24,10 @@ fun DosCartas(titulo1: String, dato1: Double, titulo2: String, dato2: Double ){
         horizontalArrangement = Arrangement.SpaceEvenly
     ){
         CartaPrincipal(titulo = titulo1, dato = dato1,
-            modifier =
-            Modifier
-                .padding(start = 30.dp)
-                .weight(1f))
-        Spacer(modifier = Modifier.width(5.dp))
+            modifier = Modifier.weight(1f))
+        Spacer(modifier = Modifier.width(10.dp))     // Genera espacio entre las dos cartas
         CartaPrincipal(titulo = titulo2, dato = dato2,
-            modifier =
-            Modifier
-                .padding(start = 30.dp)
-                .weight(1f))
+            modifier = Modifier.weight(1f))
     }
 }
 
@@ -41,18 +35,19 @@ fun DosCartas(titulo1: String, dato1: Double, titulo2: String, dato2: Double ){
 @Composable
 fun CartaPrincipal(titulo:String, dato:Double, modifier: Modifier){
     Card(
-        modifier = modifier,
+        modifier = modifier
+            .padding(16.dp),
         colors = CardDefaults.cardColors(
-            containerColor = Color.Black
+            containerColor = Color.LightGray     //Black
         )
     ){
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.padding(15.dp)
+            modifier = Modifier.padding(20.dp)
         ){
-            Text(text=titulo, color = Color.White, fontSize = 20.sp)
-            Text(text = "$$dato", color = Color.White, fontSize = 20.sp)
+            Text(text=titulo, color = Color.Black, fontSize = 20.sp)   //White
+            Text(text = "$$dato", color = Color.Black, fontSize = 20.sp)   //White
         }
     }
 }

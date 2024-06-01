@@ -36,14 +36,34 @@ class CalculadoraViewModel: ViewModel(){
             )
         }
     }
-    // Aquí generamos dos funciones
+
+    fun limpiar(){
+        state = state.copy(
+            cuenta = "",
+            propina= "",
+            cuentaPropina = 0.0,
+            totalPropina = 0.0
+        )
+    }
+
+    fun cancelarAlerta(){
+        state = state.copy(
+            mostrarAlerta = false
+        )
+    }
+
+
+
+
+
+    // Aquí generamos dos funciones:
     // 1) Cuenta + Propina
-    // 2) El porcentaje de la propina
+
     private fun calcularPrecioPropina(cuenta: Double, propina:Double): Double {
         val propinaFinal = calcularPropina(cuenta, propina)
         return  cuenta + propinaFinal
     }
-
+    // 2) El porcentaje de la propina
     private fun calcularPropina(cuenta: Double, propina:Double): Double{
         val propina = cuenta * (propina/100)
 
